@@ -45,7 +45,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\MainMenu.cs" />
      <Compile Include="Assets\Script\SetResolution.cs" />
+     <Compile Include="Assets\Script\UI\EscPauseMenu.cs" />
      <Compile Include="Assets\Script\UI\ShowInventory.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Gamemaking/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
