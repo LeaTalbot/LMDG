@@ -4,7 +4,17 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
 
-	Rigidbody2D myBody;
+
+	//=================================================================
+
+	// MOVEMENT AND ANIMATION FOR THE PLAYER
+
+	//=================================================================
+
+
+
+
+	Rigidbody2D myBody; 
 
 	private Animator animator;
 
@@ -15,6 +25,7 @@ public class Player : MonoBehaviour {
 
 
 
+
 	void Start () {
 	
 		myBody = GetComponent<Rigidbody2D>();
@@ -22,14 +33,16 @@ public class Player : MonoBehaviour {
 
 		animator = GetComponent<Animator>();
 	}
-	
+
+
+
 
 	void Update () {
-	
+
+
 		//MOVEMENT IMPLEMENTATION (NO DIAGONALS ALLOWED!)
 
-		//Still need to fix player so that we can go up and down...
-
+	
 		//ARROW MOVEMENTS:
 
 		if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
@@ -79,15 +92,27 @@ public class Player : MonoBehaviour {
 				currentYSpeed = 0;
 			}
 		}
-			
-
-		// POINT AND CLICK MOVEMENTS:
 
 
+		//=================================================================
 
+
+		// POINT AND CLICK MOVEMENTS (AND MOVEMENTS ONLY)
+
+		//TODO
+		//Setting up a raycast
+		//A* Pathfinding!
+
+
+		//=================================================================
+
+		//actually moving:
 
 		myBody.velocity = new Vector2(currentXSpeed, currentYSpeed);
 
+
+
+		//=================================================================
 
 		//WALKING AND IDLE ANIMATION
 
