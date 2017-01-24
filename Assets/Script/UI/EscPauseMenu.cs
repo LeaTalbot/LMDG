@@ -6,11 +6,21 @@ public class EscPauseMenu : MonoBehaviour {
 
 
 
+	//=================================================================
+
+	// ESC BUTTON TO QUIT GAME THROUGH IG MENU
+
+	//=================================================================
+
+
+
+
 	public GameObject escMenu;
 	public bool escMenuIsActive = false;
 
 	public Button resumeButton;
 	public Button quitButton;
+	public GameObject opaqueFilter;
 
 
 
