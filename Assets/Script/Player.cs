@@ -13,7 +13,6 @@ public class Player : MonoBehaviour {
 
 
 
-
 	Rigidbody2D myBody; 
 
 	private Animator animator;
@@ -22,6 +21,8 @@ public class Player : MonoBehaviour {
 
 	public float currentXSpeed;
 	public float currentYSpeed;
+
+
 
 
 
@@ -39,12 +40,12 @@ public class Player : MonoBehaviour {
 
 	void Update () {
 
+	
+
 
 		//MOVEMENT IMPLEMENTATION (NO DIAGONALS ALLOWED!)
 
-	
 		//ARROW MOVEMENTS:
-
 		if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
 
 			currentYSpeed = 0;
@@ -67,7 +68,6 @@ public class Player : MonoBehaviour {
 		}
 
 		//release the keys 
-
 		if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow)) {
 			
 			if (currentXSpeed < 0) {
@@ -107,9 +107,7 @@ public class Player : MonoBehaviour {
 		//=================================================================
 
 		//actually moving:
-
 		myBody.velocity = new Vector2(currentXSpeed, currentYSpeed);
-
 
 
 		//=================================================================

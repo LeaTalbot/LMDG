@@ -46,12 +46,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\ClickObjects.cs" />
+     <Compile Include="Assets\Script\Ink TEST\TESTClickWithInk.cs" />
+     <Compile Include="Assets\Script\Ink TEST\TESTPlayer.cs" />
+     <Compile Include="Assets\Script\Ink TEST\TESTinkStory.cs" />
      <Compile Include="Assets\Script\MainMenu.cs" />
      <Compile Include="Assets\Script\Player.cs" />
      <Compile Include="Assets\Script\SetResolution.cs" />
-     <Compile Include="Assets\Script\UI\ClickObjects.cs" />
      <Compile Include="Assets\Script\UI\EscPauseMenu.cs" />
      <Compile Include="Assets\Script\UI\ShowInventory.cs" />
+     <None Include="Assets\Plugins\LMDG Script scraps.txt" />
+     <None Include="Assets\Script\Ink TEST\Template.txt" />
+     <None Include="Assets\Plugins\Ink\Resources\InkDefaultTemplate.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>F:/Gamemaking/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -70,6 +76,10 @@
  <Reference Include="UnityEngine.VR">
  <HintPath>F:/Gamemaking/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{02CC421D-C4D9-2878-3686-4BCE096A193A}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
