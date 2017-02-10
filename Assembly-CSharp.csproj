@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5D13E7E2-575A-C994-F6B4-7BE377F16138}</ProjectGuid>
+    <ProjectGuid>{EFDB5D8D-3C4B-8B39-164A-C55D77E5A8F0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,12 +46,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\ClickObjects.cs" />
+     <Compile Include="Assets\Script\Ink\InkCreateButton.cs" />
+     <Compile Include="Assets\Script\Ink\InkTalking.cs" />
      <Compile Include="Assets\Script\MainMenu.cs" />
      <Compile Include="Assets\Script\Player.cs" />
      <Compile Include="Assets\Script\SetResolution.cs" />
-     <Compile Include="Assets\Script\UI\ClickObjects.cs" />
      <Compile Include="Assets\Script\UI\EscPauseMenu.cs" />
      <Compile Include="Assets\Script\UI\ShowInventory.cs" />
+     <Compile Include="Assets\Trash\Ink TEST\Click to Interact (might come back to those later)\TESTClickWithInk.cs" />
+     <Compile Include="Assets\Trash\Ink TEST\Click to Interact (might come back to those later)\TESTInkInteract.cs" />
+     <Compile Include="Assets\Trash\Ink TEST\Click to Interact (might come back to those later)\TESTPlayer.cs" />
+     <Compile Include="Assets\Trash\Ink TEST\story segment\BasicInkExample.cs" />
+     <Compile Include="Assets\Trash\Ink TEST\story segment\TESTCreateButton.cs" />
+     <Compile Include="Assets\Trash\Ink TEST\story segment\TESTInkTalk.cs" />
+     <Compile Include="Assets\Trash\Ink TEST\story segment\TESTInkTalk2.cs" />
+     <None Include="Assets\Ink Files\LMDG Script scraps.txt" />
+     <None Include="Assets\Trash\Ink TEST\Click to Interact (might come back to those later)\Template.txt" />
+     <None Include="Assets\Plugins\Ink\Resources\InkDefaultTemplate.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>F:/Gamemaking/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -70,6 +82,10 @@
  <Reference Include="UnityEngine.VR">
  <HintPath>F:/Gamemaking/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{2B7159EF-D40F-AD95-4C0E-991AE901638D}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

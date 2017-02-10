@@ -1,10 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\UI\EscPauseMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Ink TEST\TESTinkStory.cs">
     <Files>
-      <File FileName="Assets\Script\UI\EscPauseMenu.cs" Line="28" Column="2" />
-      <File FileName="Assets\Script\ClickObjects.cs" Line="11" Column="46" />
-      <File FileName="..\Capstone\Assets\Scripts\System\ClickObjects.cs" Line="66" Column="44" />
+      <File FileName="Assets\Script\Ink TEST\TESTinkStory.cs" Line="15" Column="21" />
+      <File FileName="Assets\Script\Ink TEST\TESTClickWithInk.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Player.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Ink TEST\TESTPlayer.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
