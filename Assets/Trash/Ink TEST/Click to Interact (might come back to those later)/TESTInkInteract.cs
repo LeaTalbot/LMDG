@@ -9,7 +9,7 @@ using Ink.Runtime;
 // DROP ON GAME MANAGER
 
 
-public class TESTinkStory : MonoBehaviour {
+public class TESTInkInteract : MonoBehaviour {
 
 
 
@@ -24,12 +24,12 @@ public class TESTinkStory : MonoBehaviour {
 
 	[SerializeField]
 	private Text text;
-	public bool displayTop;
 	public bool reading {
 		get {
 			return textBox.activeSelf;
 		}
 	}
+	//public bool displayTop;
 
 	void Awake () {
 		StartStory();

@@ -12,7 +12,7 @@ public class TESTPlayer : MonoBehaviour {
 	//=================================================================
 
 
-	public TESTinkStory storyScript;
+	public TESTInkInteract storyScript;
 	public TESTClickWithInk targetObject;
 
 	Rigidbody2D myBody; 

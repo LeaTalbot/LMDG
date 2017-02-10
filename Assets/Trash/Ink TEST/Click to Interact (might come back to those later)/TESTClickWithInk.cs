@@ -11,7 +11,7 @@ public class TESTClickWithInk : MonoBehaviour {
 
 
 
-	public TESTinkStory storyScript;
+	public TESTInkInteract storyScript;
 	public string inkPath = "";
 
 

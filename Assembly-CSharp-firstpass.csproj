@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{02CC421D-C4D9-2878-3686-4BCE096A193A}</ProjectGuid>
+    <ProjectGuid>{2B7159EF-D40F-AD95-4C0E-991AE901638D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
@@ -74,8 +74,8 @@
      <Compile Include="Assets\Plugins\Ink\InkRuntime\VariableReference.cs" />
      <Compile Include="Assets\Plugins\Ink\InkRuntime\VariablesState.cs" />
      <Compile Include="Assets\Plugins\Ink\InkRuntime\Void.cs" />
-     <None Include="Assets\Plugins\LMDG Script scraps.txt" />
-     <None Include="Assets\Script\Ink TEST\Template.txt" />
+     <None Include="Assets\Ink Files\LMDG Script scraps.txt" />
+     <None Include="Assets\Trash\Ink TEST\Click to Interact (might come back to those later)\Template.txt" />
      <None Include="Assets\Plugins\Ink\Resources\InkDefaultTemplate.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>F:/Gamemaking/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

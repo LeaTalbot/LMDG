@@ -20,7 +20,7 @@ public class EscPauseMenu : MonoBehaviour {
 
 	public Button resumeButton;
 	public Button quitButton;
-	public GameObject opaqueFilter;
+	//public GameObject opaqueFilter;
 
 
 

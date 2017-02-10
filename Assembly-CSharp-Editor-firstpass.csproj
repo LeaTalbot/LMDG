@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{97801E61-ED3F-54CD-11E7-0D76A71B2A05}</ProjectGuid>
+    <ProjectGuid>{2BF8E907-7694-46D3-353E-6CD4DD338966}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor-firstpass</AssemblyName>
@@ -57,8 +57,8 @@
      <Compile Include="Assets\Plugins\Ink\Editor\Ink Library\InkLibraryEditor.cs" />
      <Compile Include="Assets\Plugins\Ink\Editor\Player Window\InkPlayerWindow.cs" />
      <Compile Include="Assets\Plugins\Ink\Editor\Tools\InkEditorUtils.cs" />
-     <None Include="Assets\Plugins\LMDG Script scraps.txt" />
-     <None Include="Assets\Script\Ink TEST\Template.txt" />
+     <None Include="Assets\Ink Files\LMDG Script scraps.txt" />
+     <None Include="Assets\Trash\Ink TEST\Click to Interact (might come back to those later)\Template.txt" />
      <None Include="Assets\Plugins\Ink\Resources\InkDefaultTemplate.txt" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>F:/Gamemaking/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
@@ -117,7 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{02CC421D-C4D9-2878-3686-4BCE096A193A}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{2B7159EF-D40F-AD95-4C0E-991AE901638D}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
