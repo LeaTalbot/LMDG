@@ -25,15 +25,26 @@ public class InkTalking : MonoBehaviour {
 	[SerializeField]
 	private InkCreateButton[] buttons;
 
+	private Player player;
+
 	public GameObject textBox;
 
 	private bool waitingOnInput;
 
-	void Awake () {
-		StartStory();
+	public bool storyCannotPlay = false;
+
+
+
+
+	//void Awake () {
+	//	StartStory();
+	//}
+
+	void Start() {
+		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 	}
 
-	void StartStory () {
+	public void StartStory () {
 		InitSpeakers();
 		story = new Story (inkJSONAsset.text);
 		RefreshView();
@@ -41,13 +52,21 @@ public class InkTalking : MonoBehaviour {
 
 	void Update () {
 
+		//While story is still going, we should not be able to move or hit esc (or interact with stuff)
+		if (story.canContinue || story.currentChoices.Count > 0) {
+			player.enabled = false;
+		} else {
+			player.enabled = true;
+		}
+
+		//Have the textbox when we have text
 		if (text.enabled == true) {
 			textBox.SetActive(true);
 		} else {
 			textBox.SetActive(false);
 		}
 
-		if(!waitingOnInput && Input.GetMouseButtonDown(0)) {
+		if(!waitingOnInput && (Input.GetMouseButtonDown(0)) || Input.GetKeyDown(KeyCode.Space)) {
 			if(story.canContinue) {
 				RefreshView();
 			} else if(story.currentChoices.Count > 0) {
@@ -55,6 +74,9 @@ public class InkTalking : MonoBehaviour {
 			} else {
 				Debug.Log("Reached end of story.");
 				//				StartStory();
+				// If we don't have any more story... Well, let's turn this component off.
+				// Have another script that changes the json script and turn the thing on to continue when needed
+				storyCannotPlay = true;
 			}
 		}
 	}
@@ -67,6 +89,7 @@ public class InkTalking : MonoBehaviour {
 		} 
 		else if(story.currentChoices.Count > 0) {
 			ChangeSpeaker("Lucy");
+			HideContent();
 			for (int i = 0; i < Mathf.Min(story.currentChoices.Count, buttons.Length); i++) {
 				InkCreateButton button = buttons[i];
 				Choice choice = story.currentChoices[i];
