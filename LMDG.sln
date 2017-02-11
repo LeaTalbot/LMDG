@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMDG.Plugins", "LMDG.Plugins.csproj", "{908D08F4-BE83-E20B-F97D-8C89E7606D98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMDG", "LMDG.csproj", "{04AC42FF-5318-E07F-9ACB-B7921BF9871D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMDG.Editor.Plugins", "LMDG.Editor.Plugins.csproj", "{3D9F96A8-E1BC-1DE9-CB25-B4BDA96E3E75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{908D08F4-BE83-E20B-F97D-8C89E7606D98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{908D08F4-BE83-E20B-F97D-8C89E7606D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{908D08F4-BE83-E20B-F97D-8C89E7606D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{908D08F4-BE83-E20B-F97D-8C89E7606D98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04AC42FF-5318-E07F-9ACB-B7921BF9871D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04AC42FF-5318-E07F-9ACB-B7921BF9871D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04AC42FF-5318-E07F-9ACB-B7921BF9871D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04AC42FF-5318-E07F-9ACB-B7921BF9871D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D9F96A8-E1BC-1DE9-CB25-B4BDA96E3E75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D9F96A8-E1BC-1DE9-CB25-B4BDA96E3E75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D9F96A8-E1BC-1DE9-CB25-B4BDA96E3E75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D9F96A8-E1BC-1DE9-CB25-B4BDA96E3E75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
