@@ -66,7 +66,7 @@ public class InkTalking : MonoBehaviour {
 			textBox.SetActive(false);
 		}
 
-		if(!waitingOnInput && (Input.GetMouseButtonDown(0)) || Input.GetKeyDown(KeyCode.Space)) {
+		if(!waitingOnInput && Input.GetKeyDown(KeyCode.Space)) {
 			if(story.canContinue) {
 				RefreshView();
 			} else if(story.currentChoices.Count > 0) {

@@ -35,8 +35,10 @@ public class ClickObjects : MonoBehaviour {
 	// Update call for the dialogue box
 	private void UpdateDialogueBox() {
 
+		dialogueText.text = "";
 		dialogueBox.SetActive(isDialogueBoxActive);
 		playerImage.SetActive(isDialogueBoxActive);
+		dialogueText.gameObject.SetActive(isDialogueBoxActive);
 	}
 		
 
@@ -89,6 +91,7 @@ public class ClickObjects : MonoBehaviour {
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit = new RaycastHit();
 
+
 			if (Physics.Raycast(ray, out hit, 1000f)) {
 
 				if (hit.collider.tag == "Object") {
@@ -105,7 +108,16 @@ public class ClickObjects : MonoBehaviour {
 						//things here are only taking place in one click, so we can't really do anything sequential.
 						//hence the use of the bool to take things outside of the click but still in Update
 						//This is kind of messy code and I apologize, I'll try to clean up ASAP
+
+					//----------------------------------------------
+
+					} else if (hit.collider.name == "Vanity") {
+
+						pressSpaceToClose = true;
+						dialogueText.text = "Something else";
 					}
+
+					//----------------------------------------------
 
 				} else {
 					return;
