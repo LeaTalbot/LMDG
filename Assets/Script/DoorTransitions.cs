@@ -9,7 +9,6 @@ public class DoorTransitions : MonoBehaviour {
 
 	public Transform destination;
 	public Transform cameraDestination;
-	public Rigidbody2D cameraObj;
 
 
 

@@ -27,6 +27,7 @@ public class Scene1QA : MonoBehaviour {
 
 	//Wait 1 second before starting the story so that the transition fills smoother!
 	IEnumerator FadeIn() {
+		player.enabled = false;
 		yield return new WaitForSeconds(1f);
 		inkScript.StartStory();
 		yield break;

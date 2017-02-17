@@ -8,16 +8,22 @@ public class BackstageCamera : MonoBehaviour {
 
 	//THIS SCRIPT ALLOWS THE CAMERA TO FOLLOW PLAYER WHEN MOVING BACKSTAGE 
 
+	private float cameraPosY;
+	private float originalPosY;
+
+
 
 	public GameObject player;
-
 
 
 	void OnTriggerEnter2D (Collider2D coll) {
 
 		//camera becomes child of player object (and therefore moves with it)
 		Camera.main.transform.parent = player.transform;
+
+		// find a way to freeze camera y position!
 	}
+		
 
 	void OnTriggerExit2D (Collider2D coll) {
 
