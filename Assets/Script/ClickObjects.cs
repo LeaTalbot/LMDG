@@ -103,7 +103,7 @@ public class ClickObjects : MonoBehaviour {
 					if (hit.collider.name == "Mirror") {
 
 						pressSpaceToClose = true;
-						dialogueText.text = "Something something";
+						dialogueText.text = "Don't believe their lies. Don't believe their lies.";
 
 						//things here are only taking place in one click, so we can't really do anything sequential.
 						//hence the use of the bool to take things outside of the click but still in Update
@@ -114,7 +114,7 @@ public class ClickObjects : MonoBehaviour {
 					} else if (hit.collider.name == "Vanity") {
 
 						pressSpaceToClose = true;
-						dialogueText.text = "Something else";
+						dialogueText.text = "This one is the worst liar.";
 					}
 
 					//----------------------------------------------

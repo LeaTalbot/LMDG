@@ -10,11 +10,10 @@ public class Scene1QA : MonoBehaviour {
 	//does not refer to the ink story files but to the script that controls how we do the Talking and Choosening
 	private InkTalking inkScript;
 	private Player player;
+	private FadeInAndOut fade;
 
 	public GameObject textBox;
 	public Text text;
-
-	public Image fadeOut;
 
 
 
@@ -22,16 +21,10 @@ public class Scene1QA : MonoBehaviour {
 	void Start () {
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 		inkScript = GameObject.FindGameObjectWithTag("Canvas").GetComponent<InkTalking>();
-		StartCoroutine(FadeIn());
+		fade = this.gameObject.GetComponent<FadeInAndOut>();
+		fade.FadingIn();
 	}
-
-	//Wait 1 second before starting the story so that the transition fills smoother!
-	IEnumerator FadeIn() {
-		player.enabled = false;
-		yield return new WaitForSeconds(1f);
-		inkScript.StartStory();
-		yield break;
-	}
+		
 	
 	void Update () {
 
@@ -39,26 +32,7 @@ public class Scene1QA : MonoBehaviour {
 			textBox.SetActive(false);
 			text.enabled = false;
 			player.enabled = false; //player should not move during fade out
-			fadeOut.gameObject.SetActive(true);
-			StartCoroutine(FadeOutAndChangeScene());
+			fade.FadingOut();
 		}
-	}
-
-	private YieldInstruction fadeInstruction = new YieldInstruction();
-
-	IEnumerator FadeOutAndChangeScene () {
-
-		//Change Alpha of fadeOut image gradually
-		float currentTime = 0f;
-		Color temp = fadeOut.color;
-
-		while (currentTime < 2f) {
-			yield return fadeInstruction;
-			currentTime += Time.deltaTime;
-			temp.a = Mathf.Clamp01 (currentTime / 2f);
-			fadeOut.color = temp;
-		}
-
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 }

@@ -54,7 +54,10 @@
      <Compile Include="Assets\Script\Player.cs" />
      <Compile Include="Assets\Script\Scenes\MainMenu.cs" />
      <Compile Include="Assets\Script\Scenes\Scene1QA.cs" />
+     <Compile Include="Assets\Script\Scenes\Scene2DressingRoom.cs" />
+     <Compile Include="Assets\Script\Scenes\Scene3Kitchen.cs" />
      <Compile Include="Assets\Script\UI\EscPauseMenu.cs" />
+     <Compile Include="Assets\Script\UI\FadeInAndOut.cs" />
      <Compile Include="Assets\Script\UI\SetResolution.cs" />
      <Compile Include="Assets\Script\UI\ShowInventory.cs" />
      <Compile Include="Assets\Trash\Ink TEST\Click to Interact (might come back to those later)\TESTClickWithInk.cs" />
