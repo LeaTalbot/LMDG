@@ -23,6 +23,7 @@ public class Scene3Kitchen : MonoBehaviour {
 
 
 	void Start () {
+		Debug.Log("Started");
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 		inkScript = GameObject.FindGameObjectWithTag("Canvas").GetComponent<InkTalking>();
 		fade = this.gameObject.GetComponent<FadeInAndOut>();
@@ -32,6 +33,7 @@ public class Scene3Kitchen : MonoBehaviour {
 
 	void Update () {
 
+		Debug.Log("Updating");
 		if (inkScript.storyCannotPlay == true) {
 			textBox.SetActive(false);
 			text.enabled = false;

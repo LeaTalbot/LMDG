@@ -60,9 +60,6 @@
      <None Include="Assets\Ink Files\LMDG Script scraps.txt" />
      <None Include="Assets\Trash\Ink TEST\Click to Interact (might come back to those later)\Template.txt" />
      <None Include="Assets\Plugins\Ink\Resources\InkDefaultTemplate.txt" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>F:/Gamemaking/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>F:/Gamemaking/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -104,9 +101,6 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>F:/Gamemaking/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>F:/Gamemaking/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.VR">
  <HintPath>F:/Gamemaking/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>

@@ -24,7 +24,7 @@ public class Scene1QA : MonoBehaviour {
 		fade = this.gameObject.GetComponent<FadeInAndOut>();
 		fade.FadingIn();
 	}
-		
+
 	
 	void Update () {
 
