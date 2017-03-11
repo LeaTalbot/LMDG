@@ -13,7 +13,8 @@ public class FadeInAndOut : MonoBehaviour {
 
 
 	private InkTalking inkScript;
-	private Player player;
+	private Player playerScript;
+	private GameObject player;
 
 	public GameObject textBox;
 	public Text text;
@@ -23,12 +24,20 @@ public class FadeInAndOut : MonoBehaviour {
 
 
 
-
 	void Start () {
-		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+		player = GameObject.FindGameObjectWithTag("Player");
+		playerScript = player.GetComponent<Player>();
 		inkScript = GameObject.FindGameObjectWithTag("Canvas").GetComponent<InkTalking>();
 	}
-		
+
+
+
+	// =========================================================================
+
+	// GENERAL USE
+
+	// =========================================================================
+
 
 
 
@@ -38,7 +47,7 @@ public class FadeInAndOut : MonoBehaviour {
 	}
 
 	IEnumerator FadeIn() {
-		player.enabled = false;
+		playerScript.enabled = false;
 		yield return new WaitForSeconds(1f);
 		inkScript.StartStory();
 		yield break;
@@ -67,5 +76,63 @@ public class FadeInAndOut : MonoBehaviour {
 		}
 
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+	}
+
+
+
+	// =========================================================================
+
+	// SPECIFIC USES
+
+	// =========================================================================
+
+
+
+	public void FadeToKitchen() {
+		fadeOut.enabled = true;
+		StartCoroutine(FadeOutToKitchen());
+	}
+
+	IEnumerator FadeOutToKitchen() {
+
+		float currentTime = 0f;
+		Color temp = fadeOut.color;
+
+		while (currentTime < 2f) {
+			yield return fadeInstruction;
+			currentTime += Time.deltaTime;
+			temp.a = Mathf.Clamp01 (currentTime / 2f);
+			fadeOut.color = temp;
+		}
+
+		fadeOut.enabled = false;
+		Camera.main.transform.position = new Vector3 (15f, 0f, -10f);
+		//player.transform.position = ...
+		//player scale = ...
+		yield break;
+	}
+
+
+
+	public void FadeToMainMenu() {
+		fadeOut.enabled = true;
+		StartCoroutine(FadeOutToMainMenu());
+	}
+
+	IEnumerator FadeOutToMainMenu() {
+
+		float currentTime = 0f;
+		Color temp = fadeOut.color;
+
+		while (currentTime < 2f) {
+			yield return fadeInstruction;
+			currentTime += Time.deltaTime;
+			temp.a = Mathf.Clamp01 (currentTime / 2f);
+			fadeOut.color = temp;
+		}
+
+		fadeOut.enabled = false;
+
+		SceneManager.LoadScene(0);
 	}
 }

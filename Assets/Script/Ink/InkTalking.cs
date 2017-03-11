@@ -6,7 +6,7 @@ using Ink.Runtime;
 public class InkTalking : MonoBehaviour {
 
 	[SerializeField]
-	private TextAsset inkJSONAsset;
+	public TextAsset inkJSONAsset;
 	private Story story;
 
 	[SerializeField]

@@ -57,6 +57,8 @@
      <Compile Include="Assets\Script\Scenes\Scene1QA.cs" />
      <Compile Include="Assets\Script\Scenes\Scene2DressingRoom.cs" />
      <Compile Include="Assets\Script\Scenes\Scene3Kitchen.cs" />
+     <Compile Include="Assets\Script\Scenes\Scene4Annouce.cs" />
+     <Compile Include="Assets\Script\Scenes\Scene5Final.cs" />
      <Compile Include="Assets\Script\UI\EscPauseMenu.cs" />
      <Compile Include="Assets\Script\UI\FadeInAndOut.cs" />
      <Compile Include="Assets\Script\UI\SetResolution.cs" />
@@ -71,6 +73,9 @@
      <None Include="Assets\Ink Files\LMDG Script scraps.txt" />
      <None Include="Assets\Trash\Ink TEST\Click to Interact (might come back to those later)\Template.txt" />
      <None Include="Assets\Plugins\Ink\Resources\InkDefaultTemplate.txt" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>F:/Gamemaking/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>F:/Gamemaking/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -85,6 +90,9 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>F:/Gamemaking/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>F:/Gamemaking/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>F:/Gamemaking/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>

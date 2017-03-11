@@ -19,11 +19,11 @@ public class Scene3Kitchen : MonoBehaviour {
 	public GameObject textBox;
 	public Text text;
 
-
+	public bool hasBeenInKitchen = false;
+	public bool goBackToMainstage = false;
 
 
 	void Start () {
-		Debug.Log("Started");
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 		inkScript = GameObject.FindGameObjectWithTag("Canvas").GetComponent<InkTalking>();
 		fade = this.gameObject.GetComponent<FadeInAndOut>();
@@ -32,13 +32,52 @@ public class Scene3Kitchen : MonoBehaviour {
 
 
 	void Update () {
-
-		Debug.Log("Updating");
+		
 		if (inkScript.storyCannotPlay == true) {
-			textBox.SetActive(false);
-			text.enabled = false;
-			player.enabled = false; //player should not move during fade out
-			//fade.FadingOut();
+		
+//			We will probably need the textboxes to appear sometimes during the kitchen challenge even though we do not have ink files
+//			textBox.SetActive(false);
+//			text.enabled = false;
+			player.enabled = false; 
+
+			//if the player just finished the first QA before the challenge:
+			if (hasBeenInKitchen == false) {
+				hasBeenInKitchen = true;
+				fade.FadeToKitchen();
+				StartCoroutine(KitchenPuzzleSkip());
+
+			//if the player finished the challenge, go back to mainstage
+			} else if (hasBeenInKitchen && goBackToMainstage) {
+				goBackToMainstage = false;
+				fade.FadingOut();
+
+			} else {
+				//do nothing
+			}
 		}
+	}
+
+
+
+	IEnumerator KitchenPuzzleSkip() {
+
+
+		yield return new WaitForSeconds(2f);
+
+		textBox.SetActive(true);
+		text.enabled = true;
+		player.enabled = false; //we never know
+
+		text.text = "To come: a cool puzzle!";
+
+		yield return new WaitForSeconds(3f);
+
+		text.text = "";
+
+		textBox.SetActive(false);
+		text.enabled = false;
+		goBackToMainstage = true;
+
+		yield break;
 	}
 }
