@@ -3,6 +3,13 @@ using UnityEngine.UI;
 using System.Collections;
 using Ink.Runtime;
 
+
+
+//This is all form the Ink demo. 
+
+//I had to make some changes to the code to make some things work. It does not need to be altered any more.
+
+
 public class InkTalking : MonoBehaviour {
 
 	[SerializeField]

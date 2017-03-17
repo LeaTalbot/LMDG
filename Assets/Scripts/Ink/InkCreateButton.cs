@@ -2,6 +2,11 @@
 using UnityEngine.UI;
 using System.Collections;
 
+
+
+//This script is called by the InkTalking script to create buttons. Just grabbed it from the Ink demos. 
+
+
 public class InkCreateButton : MonoBehaviour {
 
 	public Button button;

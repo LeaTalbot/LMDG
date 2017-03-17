@@ -21,7 +21,7 @@ public class BackstageCamera : MonoBehaviour {
 		//camera becomes child of player object (and therefore moves with it)
 		Camera.main.transform.parent = player.transform;
 
-		// find a way to freeze camera y position!
+		//TODO: find a way to freeze camera y position!
 	}
 		
 

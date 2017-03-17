@@ -8,7 +8,9 @@ public class FadeInAndOut : MonoBehaviour {
 
 
 
-	//FADING IN AND OUT FOR SMOOTHER TRNASITIONS
+	//FADING IN AND OUT FOR SMOOTHER TRANSITIONS
+
+	//From another script, create a public reference to this script to use its methods.
 
 
 
@@ -41,6 +43,7 @@ public class FadeInAndOut : MonoBehaviour {
 
 
 
+	// We cannot call coroutines from outside, so we have to call a function that initiates the coroutine from within!
 	public void FadingIn() {
 		fadeOut.enabled = false;
 		StartCoroutine(FadeIn());
@@ -75,7 +78,9 @@ public class FadeInAndOut : MonoBehaviour {
 			fadeOut.color = temp;
 		}
 
+		//Note how this piece of code uses the build index to load scene! 
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		//So we need to make sure when we go to File > Build Settings... that the scenes are correctly ordered!
 	}
 
 
@@ -87,7 +92,7 @@ public class FadeInAndOut : MonoBehaviour {
 	// =========================================================================
 
 
-
+	// Instead of fading out to the next scene, it fades out and then is disabled while the camera teleports away
 	public void FadeToKitchen() {
 		fadeOut.enabled = true;
 		StartCoroutine(FadeOutToKitchen());
@@ -114,6 +119,7 @@ public class FadeInAndOut : MonoBehaviour {
 
 
 
+	//Final scene loops back to the main menu (instead of loading a non-existant next level)
 	public void FadeToMainMenu() {
 		fadeOut.enabled = true;
 		StartCoroutine(FadeOutToMainMenu());
