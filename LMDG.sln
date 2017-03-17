@@ -1,11 +1,11 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{70D0EA4D-B45F-6F92-9E00-C36F82B355F0}") = "LMDG", "Assembly-CSharp-firstpass.csproj", "{2B7159EF-D40F-AD95-4C0E-991AE901638D}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMDG", "Assembly-CSharp-firstpass.csproj", "{2B7159EF-D40F-AD95-4C0E-991AE901638D}"
 EndProject
-Project("{70D0EA4D-B45F-6F92-9E00-C36F82B355F0}") = "LMDG", "Assembly-CSharp.csproj", "{EFDB5D8D-3C4B-8B39-164A-C55D77E5A8F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMDG", "Assembly-CSharp.csproj", "{EFDB5D8D-3C4B-8B39-164A-C55D77E5A8F0}"
 EndProject
-Project("{70D0EA4D-B45F-6F92-9E00-C36F82B355F0}") = "LMDG", "Assembly-CSharp-Editor-firstpass.csproj", "{2BF8E907-7694-46D3-353E-6CD4DD338966}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMDG", "Assembly-CSharp-Editor-firstpass.csproj", "{2BF8E907-7694-46D3-353E-6CD4DD338966}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
