@@ -1,0 +1,28 @@
+A GUIDE TO MY CODE
+100% very secretive internal document – for top goddesses only!
+
+
+A lot of what the scripts do is explained within the files themselves as comments, but I still want to give you all a quick overview so that you can dive right in when needed! 
+
+
+-	General organization of the Scripts folder
+
+I think it’s pretty self-explanatory: UI-related scripts go in the UI folder, and Ink-related scripts go in the Ink folder. (I want to note that those Ink scripts are system-related and are not the .ink story files, which have their own folder outside of the Scripts folder.) 
+The Scenes sub-folder is for scripts that are, well, actual scripts (in the cinematic sense) for what happens in any given scene. For example, when does the player change room, when can she move, when should the Ink story start, etc. Speaking of which:
+
+
+-	Integrating Ink in Unity
+
+It was harder than expected! Because we want to jump in and out of the dialogue to do some puzzling and other various activities, the demo scripts had to be tweaked so that they would allow such behavior.
+So right now, what you must do to initiate a dialogue using Ink in Unity is as follow:
+-	If you are starting a new scene: drag the prefabs from the Prefabs folder in the Hierarchy. They should include a canvas, an event system, a shitty game manager, a pause menu and a player prefab.
+-	Slap your “scene” script on the game manager. Each scene should have one. If the scene is just dialogue, then you can just copy-paste the content of the script for the first scene, Scene1QA. 
+-	Make sure to assign stuff in the Editor (the dialogue box and its text component, both children of the Canvas that you grabbed from the Prefabs folder.)
+-	Also, there is a little bug with the Game Manager prefab where you have to reassign the specific fading out image from this scene (found under Canvas also), otherwise it does weird shit.
+-	Now check the Canvas again for the “InkTalking” component. Change the Ink Json asset to the json story asset that you want.
+-	Now run and hopefully it should work!
+
+Note: if you see an error in the console saying that something in InkTalking is not assigned, it's normal and should be disregarded.
+
+
+Also, if you’re creating a new scene, don’t forget in Unity to go in File > Build Settings > and add your new scene to the build index. Make sure that every scene is in the good order. (It’s important because we load levels by looking at the current build index and adding 1 to get to the next scene!) Then just hit build to replace the former build (never save it in the Asset folder!)
